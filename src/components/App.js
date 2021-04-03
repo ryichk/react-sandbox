@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import NotFound from './components/NotFound';
+import Header from './Header';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import NotFound from './NotFound';
 
 const useTimer = () => {
   const [date, setDate] = useState(new Date());
