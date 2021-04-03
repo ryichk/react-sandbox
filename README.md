@@ -1,10 +1,14 @@
 # React Sandbox
 
+## Devdependencies
+
+Node.js Version 15.12.0
+
 ## Start Project
 
 ```sh
-npm install
-npm start
+yarn
+yarn start
 ```
 
 ## Reference
