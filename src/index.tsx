@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import { useState, useEffect, useRef } from 'react';
+import * as ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -9,7 +10,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
-const useTimer = () => {
+const useTimer = (): string => {
   const [date, setDate] = useState(new Date());
   let interval = useRef();
 
@@ -26,9 +27,20 @@ const useTimer = () => {
   return date.toLocaleTimeString();
 }
 
-const App = () => {
+function extend<T, U>(first: T, second: U): T & U {
+  return { ...first, ...second };
+}
+
+const x = extend({ a: "hello", c: "world" }, { b: 42, d: "222" });
+const a = x.a;
+const c = x.c;
+const b = x.b;
+const d = x.d;
+console.log(a, b, c, d);
+
+const App: React.FunctionComponent = () => {
   const [counter, setCounter] = useState(0);
-  const time = useTimer();
+  const time: string = useTimer();
 
   useEffect(() => {
     console.log("component mounted");
@@ -44,10 +56,6 @@ const App = () => {
     };
   }, []);
 
-  const unmount = () => {
-    ReactDOM.render(<p>Hello</p>, document.getElementById("root"));
-  };
-
   return (
     <div>
       <BrowserRouter>
@@ -61,7 +69,6 @@ const App = () => {
       </BrowserRouter>
       <div>useEffect Date: {time}</div>
       <br />
-      <button onClick={unmount}>Unmount Component</button>
       {" "}
       <p>Open console and Scroll this page</p>{" "}
       <p>

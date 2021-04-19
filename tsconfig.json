@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",  // どのバージョンのJSを出力するか
+    "module": "commonjs",  // 出力するJSのモジュールの仕組みとして何を指定するか
+    "jsx": "react",
+    "allowJs": true,
+    "outDir": "./public/",  // コンパイル後のJSファイルの出力先ディレクトリを指定
+    "isolatedModules": true,
+    "incremental": true,  // 以前コンパイルを実行したコートと現在の差分を検出し必要なファイルのみコンパイル
+    "removeComments": true,
+    // "noEmit": true,  // コンパイル結果を出力しなくする時にtrue (他ツールでコンパイルを行う場合)
+    "downlevelIteration": true,  // targetがES3またはES5の時にイテレータやジェネレータを使用する際にtrue
+    "moduleResolution": "node",  // tscのモジュール解決方法を指定 (nodeはNode.jsのモジュール解決を模倣している方法)
+    "noUnusedLocals": true,  // 宣言して使用してない変数がある場合にコンパイルエラーになる
+    "noUnusedParameters": true,  // 関数で使用されていない引数がある場合にコンパイルエラーになる
+    "noImplicitReturns": true,  // 条件分岐に明示的なreturnがされないルートがある場合にコンパイルエラーになる
+    "noFallthroughCasesInSwitch": true,  // switch文のcase内でbreakがない場合にコンパイルエラーになる
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
