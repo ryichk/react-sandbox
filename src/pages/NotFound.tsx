@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const NotFound = () => {
   return <h2>Page Not found.</h2>;

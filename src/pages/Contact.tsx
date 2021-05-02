@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const Contact = () => {
   return <h2>Contact Page</h2>;
