@@ -6,7 +6,7 @@
     "allowJs": true,
     "outDir": "./public/",  // コンパイル後のJSファイルの出力先ディレクトリを指定
     "isolatedModules": true,
-    "incremental": true,  // 以前コンパイルを実行したコートと現在の差分を検出し必要なファイルのみコンパイル
+    // "incremental": true,  // 以前コンパイルを実行したコートと現在の差分を検出し必要なファイルのみコンパイル
     "removeComments": true,
     // "noEmit": true,  // コンパイル結果を出力しなくする時にtrue (他ツールでコンパイルを行う場合)
     "downlevelIteration": true,  // targetがES3またはES5の時にイテレータやジェネレータを使用する際にtrue
@@ -15,6 +15,8 @@
     "noUnusedParameters": true,  // 関数で使用されていない引数がある場合にコンパイルエラーになる
     "noImplicitReturns": true,  // 条件分岐に明示的なreturnがされないルートがある場合にコンパイルエラーになる
     "noFallthroughCasesInSwitch": true,  // switch文のcase内でbreakがない場合にコンパイルエラーになる
+    "skipLibCheck": true,
+    "noImplicitAny": true,  // 変数の型が暗黙的にany型になる場合コンバイルエラーになる
   },
   "include": [
     "src/**/*"

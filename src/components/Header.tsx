@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <ul className='navigation-menu'>
       <li>
@@ -12,6 +12,11 @@ const Header = () => {
       <li>
         <NavLink to='/about' activeClassName='active'>
           ABOUT
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to='/ts-sandbox' activeClassName='active'>
+          TypeScript SandBox
         </NavLink>
       </li>
       <li>
