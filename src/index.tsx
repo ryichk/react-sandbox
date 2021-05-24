@@ -11,7 +11,6 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
 const Index: React.FC = () => {
-
   return (
     <div>
       <BrowserRouter>
@@ -28,7 +27,4 @@ const Index: React.FC = () => {
   );
 };
 
-ReactDOM.render(
-  <Index />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Index />, document.getElementById('root'));

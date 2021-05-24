@@ -13,6 +13,7 @@
     "build": "webpack",
     "start": "webpack-dev-server -d --content-base ./public",
     "typecheck": "tsc --noEmit",
+    "format": "prettier -w src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@types/react": "^16.14.5",
     "@types/react-dom": "^16.9.12",
     "@types/react-router-dom": "^5.1.7",
+    "prettier": "^2.3.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router": "^5.2.0",

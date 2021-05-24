@@ -1,5 +1,4 @@
 const Generics = (): void => {
-
   class Queue<T> {
     private data: Array<T> = [];
     push(item: T) {
@@ -10,7 +9,7 @@ const Generics = (): void => {
     }
   }
   const queue = new Queue<number>();
-  queue.push(0)
+  queue.push(0);
 
   class Utility {
     reverse<T>(items: T[]): T[] {
@@ -26,28 +25,29 @@ const Generics = (): void => {
   console.log(u.reverse(sample));
 
   const getJSON = <T>(config: {
-    url: string,
-    headers?: { [key: string]: string },
+    url: string;
+    headers?: { [key: string]: string };
   }): Promise<T> => {
-    const fetchConfig = ({
+    const fetchConfig = {
       method: 'GET',
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
-      ...(config.headers || {})
-    });
-    return fetch(config.url, fetchConfig)
-             .then<T>(response => response.json());
-  }
+      ...(config.headers || {}),
+    };
+    return fetch(config.url, fetchConfig).then<T>((response) =>
+      response.json()
+    );
+  };
   type LoadUsersResponse = {
     users: {
       name: string;
       email: string;
     }[];
-  }
+  };
   function loadUsers() {
     return getJSON<LoadUsersResponse>({ url: 'https://example.com/users' });
   }
   loadUsers();
-}
+};
 
 export default Generics;

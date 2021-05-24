@@ -4,7 +4,7 @@ const TypeGuard = (): void => {
       console.log(x.substr(1));
     }
   }
-  doSomething("dosomething");
+  doSomething('dosomething');
 
   class Foo {
     foo = 123;
@@ -41,9 +41,9 @@ const TypeGuard = (): void => {
     }
   }
   let a: B = {
-    y: 2
+    y: 2,
   };
-  doStuff2(a)
+  doStuff2(a);
 
   type TriState = 'yes' | 'no' | 'unknown';
   function logOutState(state: TriState) {
@@ -58,13 +58,13 @@ const TypeGuard = (): void => {
   logOutState('yes');
 
   type Foo2 = {
-    kind: 'foo',
-    foo: number
-  }
+    kind: 'foo';
+    foo: number;
+  };
   type Bar2 = {
-    kind: 'bar',
-    bar: number
-  }
+    kind: 'bar';
+    bar: number;
+  };
   function doStuff3(arg: Foo2 | Bar2) {
     if (arg.kind === 'foo') {
       console.log(arg.foo);
@@ -74,8 +74,8 @@ const TypeGuard = (): void => {
   }
   let foo2: Foo2 = {
     kind: 'foo',
-    foo: 3
-  }
+    foo: 3,
+  };
   doStuff3(foo2);
 
   interface Foo3 {
@@ -98,6 +98,6 @@ const TypeGuard = (): void => {
   }
   doStuff4({ foo: 1234, common: '12222' });
   doStuff4({ bar: 3333, common: '33333' });
-}
+};
 
 export default TypeGuard;

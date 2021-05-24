@@ -30,6 +30,6 @@ const TSSandBox: React.FC = () => {
       <h2>TypeScript SandBox!</h2>
     </div>
   );
-}
+};
 
 export default TSSandBox;

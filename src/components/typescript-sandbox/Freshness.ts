@@ -10,10 +10,10 @@ const Freshness = (): void => {
   };
   const animal = {
     name: 'cow',
-    diet: 'vegan, but has milk of own species'
+    diet: 'vegan, but has milk of own species',
   };
   logIfHasName(person);
   logIfHasName(animal);
-}
+};
 
 export default Freshness;

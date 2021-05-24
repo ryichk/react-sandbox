@@ -1,5 +1,5 @@
 namespace importing {
-  export class Foo { }
+  export class Foo {}
 }
 import Bar = importing.Foo;
 
@@ -14,7 +14,7 @@ const MovingTypes = (): void => {
   // var bar: Bar;
 
   const bar: Bar = {
-    key: 'value'
+    key: 'value',
   };
   console.log(bar);
 
@@ -36,14 +36,14 @@ const MovingTypes = (): void => {
 
   const colors = {
     red: 'red',
-    blue: 'blue'
-  }
+    blue: 'blue',
+  };
   type Colors = keyof typeof colors;
   let color: Colors;
   color = 'red';
   color = 'blue';
   // color = 'green'; error
   console.log(color);
-}
+};
 
 export default MovingTypes;
