@@ -5,7 +5,7 @@ enum Weekday {
   Thursday,
   Friday,
   Saturday,
-  Sunday
+  Sunday,
 }
 
 namespace Weekday {
@@ -27,8 +27,8 @@ const Enum = (): void => {
     CanFly = 1 << 1,
   }
   type Animal = {
-    flags: AnimalFlags
-  }
+    flags: AnimalFlags;
+  };
 
   function printAnimalAbilities(animal: Animal) {
     const animalFlags = animal.flags;
@@ -55,6 +55,6 @@ const Enum = (): void => {
   const sun = Weekday.Sunday;
   console.log(Weekday.isBusinessDay(mon));
   console.log(Weekday.isBusinessDay(sun));
-}
+};
 
 export default Enum;

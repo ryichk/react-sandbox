@@ -36,6 +36,6 @@ const Mixins = (): void => {
   console.log(timestampedActivatableUserExample.timestamp);
   timestampedActivatableUserExample.activate();
   console.log(timestampedActivatableUserExample.isActivated);
-}
+};
 
 export default Mixins;

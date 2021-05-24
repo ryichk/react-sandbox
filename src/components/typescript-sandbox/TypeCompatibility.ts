@@ -21,6 +21,6 @@ const TypeCompatibility = (): void => {
   animalArr = catArr;
   animalArr.push(new Animal('another animal'));
   // catArr.forEach(c => c.meow());
-}
+};
 
 export default TypeCompatibility;

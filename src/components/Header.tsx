@@ -26,6 +26,6 @@ const Header: React.FC = () => {
       </li>
     </ul>
   );
-}
+};
 
 export default Header;

@@ -4,12 +4,12 @@ const IndexSignatre = (): void => {
   console.log(foo['hello']);
 
   class Foo {
-    constructor(public message: string){};
+    constructor(public message: string) {}
     log() {
       console.log(this.message);
     }
   }
-  let fooInstance: any = {}
+  let fooInstance: any = {};
   fooInstance['hello'] = new Foo('world');
   fooInstance['hello'].log();
 
@@ -17,18 +17,18 @@ const IndexSignatre = (): void => {
     toString() {
       console.log('toString called');
       return 'Hello';
-    }
-  }
+    },
+  };
   let foo2: any = {};
   foo2[obj.toString()] = 'world';
   console.log(foo2[obj.toString()]);
   console.log(foo2['Hello']);
 
   let foo3: {
-    [index: string]: {message: string}
+    [index: string]: { message: string };
   } = {};
   foo3['a'] = {
-    message: 'some message'
+    message: 'some message',
   };
   console.log(foo3['a'].message);
 
@@ -36,16 +36,16 @@ const IndexSignatre = (): void => {
     color?: string;
     nest?: {
       [selector: string]: NestedCSS;
-    }
+    };
   }
   const example: NestedCSS = {
     color: 'red',
     nest: {
       '.subclass': {
-        color: 'blue'
-      }
-    }
-  }
+        color: 'blue',
+      },
+    },
+  };
   console.log(example);
 
   // type FieldState = {
@@ -62,6 +62,6 @@ const IndexSignatre = (): void => {
   // const bar: FormState = {
   //   isValid: false
   // }
-}
+};
 
 export default IndexSignatre;
